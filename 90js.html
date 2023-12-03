@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>demo</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<form name="fm1">
+<label type="fname">First Name:</label><input type="text" name="fnane" value="">
+<input type="submit" value="submit" onClick="cblank()">
+</form>
+<script type="text/javascript">
+function cblank()
+{
+ if(document.fm1.fname.value == "")
+{
+    alert("please provide your name!"):
+    document.fm1.fname.focus() ;
+   }
+}
+</script>
+</body>
+</html>

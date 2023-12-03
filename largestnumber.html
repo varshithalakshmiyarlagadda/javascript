@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+</head>
+<body>
+ <label for="v1">A</label><input type="text" id="v1" name="aval" placeholder="aval" required autofocus<br><br>
+ <label for="v2">B</label><input type="text" id="v2" name="bval" placeholder="bval" required<br><br>
+ <label for="v3">C</label><input type="text" id="v3" name="cval" placeholder="cval" required<br><br>
+<input type="button" value="submit" onclick="chkbg()">
+</form>
+<script type="text/javascript">
+function chkbg()
+{
+a=parseInt(document.getElementById("v1").value)
+b=parseInt(document.getElementById("v2").value)
+c=parseInt(document.getElementById("v3").value)
+if(a>b&&a>c)
+{
+alert("A is big")
+}
+else if(b>c&&b>c)
+{
+alert("B is big")
+}
+else if(c>a&&c>b)
+{
+alert("Cis big")
+}
+}
+</script>
+</body>
+</html>

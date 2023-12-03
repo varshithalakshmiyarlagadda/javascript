@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S&C Interest</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <label for="v1">Enter Principal amount</label>
+  <input type="text" id="v1" name="aval" placeholder="Principal amount" required autofocus><br><br>
+
+  <label for="v2">Enter Time</label>
+  <input type="text" id="v2" name="bval" placeholder="Time" required><br><br>
+
+  <label for="v3">Enter Rate of Interest</label>
+  <input type="text" id="v3" name="cval" placeholder="Rate of Interest" required><br><br>
+
+  <input type="button" value="submit" onclick="callInterest()"><br><br>
+
+  <label for="v4">Simple Interest</label>
+  <input type="text" id="v4" name="dval" placeholder="Simple Interest" required><br><br>
+
+  <label for="v5">Compound Interest</label>
+  <input type="text" id="v5" name="eval" placeholder="Compound Interest" required><br><br>
+
+  <script>
+    function callInterest() {
+      var principal = parseFloat(document.getElementById("v1").value);
+      var time = parseFloat(document.getElementById("v2").value);
+      var rateOfInterest = parseFloat(document.getElementById("v3").value);
+
+      var si = (principal * time * rateOfInterest) / 100;
+      document.getElementById("v4").value = si;
+
+      var ci = principal * (Math.pow(1 + rateOfInterest / 100, time)) - principal;
+      document.getElementById("v5").value = ci;
+    }
+  </script>
+</body>
+</html>

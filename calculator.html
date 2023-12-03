@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo</title>
+    <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .d1 {
+            background-color:#B4F9C2 ;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;s
+            color: #495735 ;
+            box-shadow: 4px 4px 4px 4px #000000;
+            padding: 20px;
+        }
+        
+        .bts1 {
+            border-radius: 5px;
+            background-color:#F099A5 ;
+            margin: 5px;
+        }
+        
+        .tbs1 {
+            border-radius: 5px;
+            background-color:#D6A4D1  ;
+            color: #495735  ;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        td {
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body background ="/images/43.png">
+    <form name="fm1">
+        <div class="d1">
+            <table>
+                <tr>
+                    <td><label for="aval">A</label><input type="text" id="v1" name="aval" placeholder="" required focus class="tbs1"></td>
+                </tr>
+                <tr>
+                    <td><label for="bval">B</label><input type="text" id="v2" name="bval" placeholder="" required class="tbs1"></td>
+                </tr>
+                <tr>
+                    <td style="position:relative;left:20px;">
+                        <input type="button" value="+" class="bts1" onClick="mysum()">
+                        <input type="button" value="-" class="bts1" onClick="mysub()">
+                        <input type="button" value="*" class="bts1" onClick="mymul()">
+                        <input type="button" value="/" class="bts1" onClick="mydiv()">
+                        <input type="button" value="%" class="bts1" onClick="mymod()">
+                        <input type="button" value="<-" class="bts1" onClick="reset()">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cval">Answer</label><input type="text" id="v3" name="cval" placeholder="" required focus class="tbs1"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+    function mysum() {
+        a = parseInt(document.getElementById("v1").value);
+        b = parseInt(document.getElementById("v2").value);
+        c = a + b;
+        document.getElementById("v3").value = c;
+    }
+
+    function mysub() {
+        a = parseInt(document.getElementById("v1").value);
+        b = parseInt(document.getElementById("v2").value);
+        c = a - b;
+        document.getElementById("v3").value = c;
+    }
+
+    function mymul() {
+        a = parseInt(document.getElementById("v1").value);
+        b = parseInt(document.getElementById("v2").value);
+        c = a * b;
+        document.getElementById("v3").value = c;
+    }
+
+    function mydiv() {
+        a = parseInt(document.getElementById("v1").value);
+        b = parseInt(document.getElementById("v2").value);
+        c = a / b;
+        document.getElementById("v3").value = c;
+    }
+
+    function mymod() {
+        a = parseInt(document.getElementById("v1").value);
+        b = parseInt(document.getElementById("v2").value);
+        c = a % b;
+        document.getElementById("v3").value = c;
+    }
+</script>
+</html>

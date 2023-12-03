@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+</head>
+<body>
+<form name="fm1">
+ <label for="v1">Age</label><input type="text" id="v1" name="aval" placeholder="Enter age" required autofocus<br><br>
+<input type="button" value="check" onclick="chkbg()">
+</form>
+<script type="text/javascript">
+function chkbg()
+{
+age=parseInt(document.getElementById("v1").value)
+if(age>=65)
+{
+alert("Senior citizen Eligible to vote")
+}
+else if(age<65&&age>18)
+{
+alert("Major citizen Eligible to vote")
+}
+else if(age<18)
+{
+alert("Minor citizen Not Eligible to vote")
+}
+}
+</script>
+</body>
+</html>

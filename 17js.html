@@ -1,0 +1,7 @@
+p=parseFloat(prompt("Enter principal..:"))
+t=parseFloat(prompt("Enter Time..:"))
+r=parseFloat(prompt("Enter Rate Of Interest..:"))
+si=p*t*r/100
+console.log("simple Interest=",si)
+ci=p*Math.pow(1+r/100,t)
+console.log("compound Interest=",ci)
